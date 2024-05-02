@@ -61,10 +61,23 @@ check([DonationType] In('cash','Item'))
 --for adoption) from the "Pets" table. Include the pet's name, age, breed, and type
 --in the result set. Ensure that the query filters out pets that are not available for adoption.
 
--- insetr values to Pets table
+-- insetr values to  tables
 insert into Pets values('Tom', 4,'Male','Dog',1),
 						('Timy',3,'Male','Dog',0),
 						('Pussy',4,'Female','Cat',1)
+
+insert into Shelters values (201,'Kings Pets','Chennai'),
+							(202,'Quens Pets','Karur')
+
+insert into Donations values ('Kavin','Cash',5000,'cash','2023-04-25 12:00'),
+							('Sathis','Item',6000,'Cat','2024-05-30 01:00')	
+
+insert into AdoptionEvents values ('KingAdoption','2024-04-25 08:00','Chennai'),
+									('QuensAdoption','2024-04-30 11:00','Karur')
+
+insert into Participants values ('Bhoopesh','Shelter',401),
+								('Dharun','Adopter',402)
+
 
 select [Name], Age,Breed,[Type]
 from Pets
